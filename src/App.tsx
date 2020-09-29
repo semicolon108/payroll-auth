@@ -11,7 +11,7 @@ const validationSchema = yup.object().shape({
 })
 
 const isProd = process.env.NODE_ENV === 'production' ? true : false
-const baseURL = isProd ? 'https://payroll.laofix.com' : 'http://localhost:8080'
+const baseURL = isProd ? 'https://paytoday.netlify.app' : 'http://localhost:8080'
 
 
 function App() {
