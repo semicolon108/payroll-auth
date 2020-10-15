@@ -4,20 +4,18 @@ import {useMutation} from '@apollo/react-hooks'
 import {Formik} from 'formik'
 import * as yup from 'yup'
 import Bear from "./components/Bear";
+import {loginURL} from "./services/apollo-client";
 
 const validationSchema = yup.object().shape({
     email: yup.string().email().required(),
     password: yup.string().min(6).max(192).required()
 })
 
-const isProd = process.env.NODE_ENV === 'production' ? true : false
-const baseURL = isProd ? 'https://paytoday.netlify.app' : 'http://localhost:8080'
-
 
 function App() {
     const [login, {loading, error}] = useMutation(LOGIN, {
         onCompleted({login}) {
-            window.location.href = `${baseURL}/?accessToken=${login}`
+            window.location.href = `${loginURL}/?accessToken=${login}`
         }
     })
 
