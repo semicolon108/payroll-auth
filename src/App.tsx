@@ -49,7 +49,10 @@ function App() {
                 >
                     {({handleSubmit, handleChange, values, errors}) => (
                         <form onSubmit={handleSubmit} className="bg-white shadow-md rounded-lg px-8 pt-6 pb-8 mb-4">
-                            <Bear/>
+                            {/* <Bear/> */}
+                            <div className="flex justify-center">
+                                <img src="/img/hr-sabai-sq.svg" style={{ height: 210 }} alt=""/>
+                            </div>
                             <p className="text-center text-red-600 text-xl font-bold">{checkIsError('admin')}</p>
                             <h1 className=" text-4xl font-bold text-gray-700 mb-3">Login</h1>
                             <div className="mb-4">
@@ -92,7 +95,7 @@ function App() {
                                         :
                                         <button
                                             type="submit"
-                                            className="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                                            className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
                                             Submit
                                         </button>
                                 }
@@ -101,7 +104,7 @@ function App() {
                     )}
                 </Formik>
                 <p className="text-center text-gray-500 text-xs">
-                    &copy;2020 PAYTODAY. All rights reserved.
+                    &copy;2021 HR-Sabai. All rights reserved.
                 </p>
             </div>
         </div>
